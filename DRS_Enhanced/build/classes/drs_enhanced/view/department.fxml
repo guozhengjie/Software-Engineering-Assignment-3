@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="drs_enhanced.controller.DepartmentController" alignment="CENTER" spacing="20" style="-fx-padding: 20;">
+    <Label text="Manage Departments" style="-fx-font-size: 20px;" />
+
+    <!-- Table to display departments -->
+    <TableView fx:id="departmentTable" prefHeight="200" prefWidth="400">
+        <columns>
+            <TableColumn text="Department ID" fx:id="departmentIdColumn" prefWidth="100" />
+            <TableColumn text="Department Name" fx:id="departmentNameColumn" prefWidth="150" />
+            <TableColumn text="Response Time" fx:id="responseTimeColumn" prefWidth="150" />
+        </columns>
+    </TableView>
+
+    <!-- Form to add or update department -->
+    <HBox spacing="10">
+        <TextField fx:id="departmentNameField" promptText="Department Name" />
+        <TextField fx:id="responseTimeField" promptText="Response Time" />
+    </HBox>
+
+    <!-- Action Buttons -->
+    <HBox spacing="10">
+        <Button text="Add Department" onAction="#handleAddDepartment" />
+        <Button text="Update Department" onAction="#handleUpdateDepartment" />
+        <Button text="Delete Department" onAction="#handleDeleteDepartment" />
+    </HBox>
+</VBox>

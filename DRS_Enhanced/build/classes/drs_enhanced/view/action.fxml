@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane prefHeight="500" prefWidth="600" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="drs_enhanced.controller.ActionController" style="-fx-background-color: #F2F2F2;">
+    <children>
+        <!-- Header -->
+        <Label layoutX="200" layoutY="20" text="Action Management" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+        <!-- Action ID (Auto-generated, Not Editable) -->
+        <Label layoutX="30" layoutY="70" text="Action ID:" style="-fx-font-size: 14px;" />
+        <TextField fx:id="actionIdField" layoutX="150" layoutY="70" prefWidth="150" promptText="Auto-generated" editable="false" />
+
+        <!-- Disaster ID (ComboBox for selecting disaster) -->
+        <Label layoutX="30" layoutY="110" text="Disaster ID:" style="-fx-font-size: 14px;" />
+        <ComboBox fx:id="disasterIdComboBox" layoutX="150" layoutY="110" prefWidth="150" />
+
+        <!-- Team ID (ComboBox for selecting team) -->
+        <Label layoutX="30" layoutY="150" text="Team ID:" style="-fx-font-size: 14px;" />
+        <ComboBox fx:id="teamIdComboBox" layoutX="150" layoutY="150" prefWidth="150" /> <!-- Changed fx:id -->
+
+        <!-- Action Type -->
+        <Label layoutX="30" layoutY="190" text="Action Type:" style="-fx-font-size: 14px;" />
+        <TextField fx:id="actionTypeField" layoutX="150" layoutY="190" prefWidth="150" promptText="Enter action type" />
+
+        <!-- Action Description -->
+        <Label layoutX="30" layoutY="230" text="Action Description:" style="-fx-font-size: 14px;" />
+        <TextArea fx:id="actionDescriptionField" layoutX="150" layoutY="230" prefHeight="80" prefWidth="300" promptText="Enter action description" />
+
+        <!-- Start Date -->
+        <Label layoutX="30" layoutY="330" text="Start Date:" style="-fx-font-size: 14px;" />
+        <DatePicker fx:id="startDatePicker" layoutX="150" layoutY="330" prefWidth="150" />
+
+        <!-- End Date -->
+        <Label layoutX="30" layoutY="370" text="End Date:" style="-fx-font-size: 14px;" />
+        <DatePicker fx:id="endDatePicker" layoutX="150" layoutY="370" prefWidth="150" />
+
+        <!-- Status -->
+        <Label layoutX="30" layoutY="410" text="Status:" style="-fx-font-size: 14px;" />
+        <ComboBox fx:id="statusComboBox" layoutX="150" layoutY="410" prefWidth="150" /> <!-- Corrected layoutY -->
+
+        <!-- Submit Button -->
+        <Button fx:id="submitButton" layoutX="150" layoutY="460" text="Submit" onAction="#handleSubmitAction" style="-fx-background-color: #3498DB; -fx-text-fill: white;" />
+
+        <!-- List of Actions -->
+        <Label layoutX="350" layoutY="70" text="All Actions:" style="-fx-font-size: 14px;" />
+        <ListView fx:id="actionListView" layoutX="350" layoutY="100" prefHeight="300" prefWidth="200" />
+    </children>
+</AnchorPane>
