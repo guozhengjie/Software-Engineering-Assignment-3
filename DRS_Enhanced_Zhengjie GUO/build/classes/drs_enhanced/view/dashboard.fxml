@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane prefHeight="600" prefWidth="800" xmlns:fx="http://javafx.com/fxml" fx:controller="drs_enhanced.controller.DashboardController" style="-fx-background-color: #F2F2F2;">
+    <children>
+        <!-- Header -->
+        <Label layoutX="200" layoutY="20" text="Disaster Response Dashboard" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+        <!-- System Statistics Section -->
+        <Label layoutX="50" layoutY="70" text="System Overview" style="-fx-font-size: 18px;" />
+
+        <GridPane layoutX="50" layoutY="100" hgap="10" vgap="15">
+            <!-- Active Disasters -->
+            <Label text="Active Disasters:" style="-fx-font-size: 14px;" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <TextField fx:id="activeDisastersField" prefWidth="100" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+            <!-- Total Assessments -->
+            <Label text="Total Assessments:" style="-fx-font-size: 14px;" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <TextField fx:id="totalAssessmentsField" prefWidth="100" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+            <!-- Departments Involved -->
+            <Label text="Departments Involved:" style="-fx-font-size: 14px;" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <TextField fx:id="departmentsInvolvedField" prefWidth="100" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+            <!-- Severity Breakdown -->
+            <Label text="Critical Disasters:" style="-fx-font-size: 14px;" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <TextField fx:id="criticalDisastersField" prefWidth="100" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+        </GridPane>
+
+        <!-- Chart Section: Disaster Severity Distribution -->
+        <Label layoutX="400" layoutY="70" text="Disaster Severity Distribution" style="-fx-font-size: 18px;" />
+        <PieChart fx:id="disasterSeverityChart" layoutX="400" layoutY="100" prefHeight="250" prefWidth="350" />
+
+        <!-- Bar Chart: Monthly Reports -->
+        <Label layoutX="50" layoutY="300" text="Monthly Assessment Reports" style="-fx-font-size: 18px;" />
+        <BarChart fx:id="monthlyReportsBarChart" layoutX="50" layoutY="330" prefHeight="200" prefWidth="300">
+            <xAxis>
+                <CategoryAxis label="Month" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis label="Number of Reports" />
+            </yAxis>
+        </BarChart>
+        
+        <!-- Recent Activities Section -->
+        <Label layoutX="400" layoutY="380" text="Recent Activity" style="-fx-font-size: 18px;" />
+        <ListView fx:id="recentActivityListView" layoutX="400" layoutY="410" prefHeight="160" prefWidth="350" />
+    </children>
+</AnchorPane>
