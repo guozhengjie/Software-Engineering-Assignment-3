@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="drs_enhanced.controller.MainController" prefHeight="600" prefWidth="800">
+    <children>
+        <!-- Navigation Bar -->
+        <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-background-color: #336699; -fx-padding: 10;">
+            <Button fx:id="dashboardButton" text="Dashboard" onAction="#handleDashboard" style="-fx-background-color: #FFFFFF;" />
+            <Button fx:id="disasterReportButton" text="Disaster Report" onAction="#handleDisasterReport" style="-fx-background-color: #FFFFFF;" />
+            <Button fx:id="assessmentButton" text="Assessment" onAction="#handleAssessment" style="-fx-background-color: #FFFFFF;" />
+            <Button fx:id="actionButton" text="Action" onAction="#handleAction" style="-fx-background-color: #FFFFFF;" />
+            <Button fx:id="departmentButton" text="Department" onAction="#handleDepartment" style="-fx-background-color: #FFFFFF;" />
+            <Button fx:id="teamButton" text="Team" onAction="#handleTeam" style="-fx-background-color: #FFFFFF;" />
+            <Button fx:id="logoutButton" text="Logout" onAction="#logout" style="-fx-background-color: #e74c3c; -fx-text-fill: white;"/>
+        </HBox>
+
+        <!-- Main Content Area where other views will be loaded -->
+        <StackPane fx:id="contentArea" layoutY="50.0" style="-fx-padding: 20;" />
+    </children>
+</AnchorPane>
