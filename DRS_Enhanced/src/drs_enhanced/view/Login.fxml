@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="250" prefWidth="320" xmlns:fx="http://javafx.com/fxml" fx:controller="drs_enhanced.controller.LoginController">
+    <children>
+        <!-- Header Label -->
+        <Label layoutX="40" layoutY="10" text="Disaster Response System" style="-fx-text-fill: #2C3E50; -fx-font-size: 20px; -fx-font-weight: bold;" />
+
+        <!-- Username Label -->
+        <Label layoutX="40" layoutY="50" text="Username:" style="-fx-text-fill: #2C3E50; -fx-font-weight: bold;" />
+        <TextField fx:id="usernameField" layoutX="120" layoutY="50" promptText="Enter your username" style="-fx-background-color: #FFFFFF; -fx-border-color: #3498DB;" />
+
+        <!-- Password Label -->
+        <Label layoutX="40" layoutY="100" text="Password:" style="-fx-text-fill: #2C3E50; -fx-font-weight: bold;" />
+        <PasswordField fx:id="passwordField" layoutX="120" layoutY="100" promptText="Enter your password" style="-fx-background-color: #FFFFFF; -fx-border-color: #3498DB;" />
+
+        <!-- Login Button -->
+        <Button layoutX="120" layoutY="150" text="Login" onAction="#handleLoginAction" fx:id="loginButton" 
+                style="-fx-background-color: #3498DB; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px; -fx-padding: 10 20 10 20;" />
+
+        <!-- Error Message Label -->
+       <!-- <Label fx:id="errorMessage" layoutX="40" layoutY="180" textFill="red" style="-fx-font-weight: bold;"/>-->
+    </children>
+</AnchorPane>

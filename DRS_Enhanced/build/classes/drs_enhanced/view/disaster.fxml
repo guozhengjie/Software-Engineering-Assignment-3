@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane prefHeight="400" prefWidth="600" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="drs_enhanced.controller.DisasterController" style="-fx-background-color: #F2F2F2;">
+    <children>
+        <!-- Header -->
+        <Label layoutX="200" layoutY="20" text="Disaster Response Report" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+        <!-- Disaster Type -->
+        <Label layoutX="30" layoutY="70" text="Disaster Type:" style="-fx-font-size: 14px;" />
+        <ComboBox fx:id="typeComboBox" layoutX="150" layoutY="70" prefWidth="150" />
+
+        <!-- Description -->
+        <Label layoutX="30" layoutY="110" text="Description:" style="-fx-font-size: 14px;" />
+        <TextArea fx:id="descriptionField" layoutX="150" layoutY="110" prefHeight="80" prefWidth="300" promptText="Enter description" />
+
+        <!-- Location -->
+        <Label layoutX="30" layoutY="200" text="Location:" style="-fx-font-size: 14px;" />
+        <TextField fx:id="locationField" layoutX="150" layoutY="200" prefWidth="150" promptText="Enter location" />
+
+        <!-- Date Reported -->
+        <Label layoutX="30" layoutY="240" text="Date Reported:" style="-fx-font-size: 14px;" />
+        <DatePicker fx:id="datePicker" layoutX="150" layoutY="240" prefWidth="150" />
+
+        <!-- Status -->
+        <Label layoutX="30" layoutY="280" text="Status:" style="-fx-font-size: 14px;" />
+        <ComboBox fx:id="statusComboBox" layoutX="150" layoutY="280" prefWidth="150" />
+
+        <!-- Severity -->
+        <Label layoutX="30" layoutY="320" text="Severity:" style="-fx-font-size: 14px;" />
+        <Spinner fx:id="severitySpinner" layoutX="150" layoutY="320" prefWidth="150" />
+
+        <!-- Submit Button -->
+        <Button fx:id="submitButton" layoutX="150" layoutY="360" text="Submit" onAction="#handleSubmitAction" style="-fx-background-color: #3498DB; -fx-text-fill: white;" />
+
+        <!-- List of Disasters -->
+        <Label layoutX="350" layoutY="70" text="All Disasters:" style="-fx-font-size: 14px;" />
+        <ListView fx:id="disasterListView" layoutX="350" layoutY="100" prefHeight="200" prefWidth="200" />
+    </children>
+</AnchorPane>
