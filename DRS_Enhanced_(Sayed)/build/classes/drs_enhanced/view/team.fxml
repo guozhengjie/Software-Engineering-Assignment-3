@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="drs_enhanced.controller.TeamController" alignment="CENTER" spacing="20" style="-fx-padding: 20;">
+    <Label text="Manage Response Teams" style="-fx-font-size: 20px;" />
+
+    <!-- Table to display teams -->
+    <TableView fx:id="teamTable" prefHeight="200" prefWidth="400">
+        <columns>
+            <TableColumn text="Team ID" fx:id="teamIdColumn" prefWidth="100" />
+            <TableColumn text="Team Name" fx:id="teamNameColumn" prefWidth="150" />
+            <TableColumn text="Contact Info" fx:id="contactInfoColumn" prefWidth="150" />
+        </columns>
+    </TableView>
+
+    <!-- Form to add or update team -->
+    <HBox spacing="10">
+        <TextField fx:id="teamNameField" promptText="Team Name" />
+        <TextField fx:id="contactInfoField" promptText="Contact Info" />
+    </HBox>
+
+    <!-- Action Buttons -->
+    <HBox spacing="10">
+        <Button text="Add Team" onAction="#handleAddTeam" />
+        <Button text="Update Team" onAction="#handleUpdateTeam" />
+        <Button text="Delete Team" onAction="#handleDeleteTeam" />
+    </HBox>
+</VBox>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane prefHeight="400" prefWidth="600" xmlns:fx="http://javafx.com/fxml" fx:controller="drs_enhanced.controller.AssessmentController" style="-fx-background-color: #F2F2F2;">
+    <children>
+        <!-- Header -->
+        <Label layoutX="200" layoutY="20" text="Disaster Response Assessment" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+        <!-- Assessment ID -->
+        <TextField fx:id="assessmentIdField" layoutX="150" layoutY="70" prefWidth="150" promptText="Auto-generated" editable="false" />
+
+        <!-- Disaster ID -->
+        <Label layoutX="30" layoutY="110" text="Disaster ID:" style="-fx-font-size: 14px;" />
+        <ComboBox fx:id="disasterIdComboBox" layoutX="150" layoutY="110" prefWidth="150" />
+
+        <!-- Department ID -->
+        <Label layoutX="30" layoutY="150" text="Department ID:" style="-fx-font-size: 14px;" />
+        <ComboBox fx:id="departmentIdComboBox" layoutX="150" layoutY="150" prefWidth="150" />
+
+        <!-- Assessment Date -->
+        <Label layoutX="30" layoutY="190" text="Assessment Date:" style="-fx-font-size: 14px;" />
+        <DatePicker fx:id="assessmentDatePicker" layoutX="150" layoutY="190" prefWidth="150" />
+
+        <!-- Findings -->
+        <Label layoutX="30" layoutY="230" text="Findings:" style="-fx-font-size: 14px;" />
+        <TextArea fx:id="findingsField" layoutX="150" layoutY="230" prefHeight="80" prefWidth="300" promptText="Enter findings" />
+
+        <!-- Severity Level -->
+        <Label layoutX="30" layoutY="320" text="Severity Level:" style="-fx-font-size: 14px;" />
+        <Spinner fx:id="severityLevelSpinner" layoutX="150" layoutY="320" prefWidth="150" />
+
+        <!-- Submit Button -->
+        <Button fx:id="submitButton" layoutX="150" layoutY="370" text="Submit" onAction="#handleSubmit" style="-fx-background-color: #3498DB; -fx-text-fill: white;" />
+
+        <!-- List of Assessments -->
+        <Label layoutX="350" layoutY="70" text="All Assessments:" style="-fx-font-size: 14px;" />
+        <ListView fx:id="assessmentListView" layoutX="350" layoutY="100" prefHeight="200" prefWidth="200" />
+    </children>
+</AnchorPane>
